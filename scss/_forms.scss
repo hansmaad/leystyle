@@ -1,0 +1,97 @@
+
+label {
+    display: inline-block;
+}
+
+.#{$prefix}form-group {
+    margin-bottom: 1em;
+
+    label {
+        margin-bottom: .25rem;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    input, select, textarea {
+        display: block;
+        width: 100%;
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+        &:disabled, &[readonly] {
+            background-color: #ccc;
+        }
+    }
+
+    textarea {
+        height: auto;
+    }
+
+    input:focus, select:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, .5);
+    }
+}
+
+.#{$prefix}input-group {
+    display: flex;
+    input, select {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: .4em;
+        }
+    }
+    select {
+        width: auto;
+    }
+}
+
+.#{$prefix}form-validation {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: $leybold-text-error-color;
+}
+
+.#{$prefix}form-narrow {
+    max-width: 23rem;
+}
+
+input[type=number] {
+    text-align: right;
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+::-ms-clear,
+::-webkit-search-decoration,
+::-webkit-search-cancel-button,
+::-webkit-search-results-button,
+::-webkit-search-results-decoration {
+    display: none;
+}
+
+::-ms-expand {
+    background-color: transparent;
+    border: 0;
+}
+
+.#{$prefix}select-transparent {
+    outline: 0;
+    background: transparent;
+    border: 0;
+}
+

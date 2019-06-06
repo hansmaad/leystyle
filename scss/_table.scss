@@ -1,0 +1,59 @@
+
+$leybold-table-cell-padding: .5em;
+$leybold-table-border-width: 1px;
+$leybold-table-border-color: $leybold-color-gray-1;
+
+.#{$prefix}table {
+
+    width: 100%;
+
+    td {
+      padding: $leybold-table-cell-padding;
+      vertical-align: top;
+      border-top: $leybold-table-border-width solid $leybold-table-border-color;
+    }
+
+    thead th {
+      vertical-align: bottom;
+      border-bottom: $leybold-table-border-width solid darken($leybold-table-border-color, 12%);
+    }
+
+    tbody + tbody {
+      border-top: (2 * $leybold-table-border-width) solid $leybold-table-border-color;
+    }
+
+}
+
+.#{$prefix}table-bordered {
+    border: $leybold-table-border-width solid $leybold-table-border-color;
+
+    th,
+    td {
+        border: $leybold-table-border-width solid $leybold-table-border-color;
+    }
+
+    thead {
+        th,
+        td {
+        border-bottom-width: 2 * $leybold-table-border-width;
+        }
+    }
+}
+
+td.#{$prefix}td-shrink {
+    width: 1px;
+    white-space: nowrap;
+}
+
+td.#{$prefix}td-vcenter {
+    vertical-align: middle;
+}
+
+.#{$prefix}table-borderless {
+    th,
+    td,
+    thead th,
+    tbody + tbody {
+        border: 0;
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "leystyle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass --load-path=node_modules scss/leystyle.scss dist/leystyle.css",
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run serve\"",
+    "watch": "sass --load-path=node_modules --watch scss/leystyle.scss dist/leystyle.css",
+    "serve": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hansmaad/leystyle.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hansmaad/leystyle/issues"
+  },
+  "homepage": "https://github.com/hansmaad/leystyle#readme",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "concurrently": "^4.1.0",
+    "live-server": "^1.2.1",
+    "sass": "^1.20.3"
+  },
+  "peerDependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}

@@ -1,0 +1,90 @@
+/* USAGE:
+<div class="guide-radio gude-radio-inline">
+    <input type="radio" id="radio-xyz">
+    <label for="radio-xyz">Xyz</label>
+</div>
+*/
+
+$ui-radio-checked-color: $leybold-radio-default-color;
+$ui-radio-border-color: #777;
+$ui-radio-size: 20px;
+$ui-radio-checked-size: 10px;
+$ui-radio-ripple-size: 15px;
+
+.#{$prefix}radio {
+    //font-size: 16px;
+    margin: 1em 0;
+    line-height: $ui-radio-size;
+
+    &.#{$prefix}condensed {
+        margin: 6px 0;
+    }
+
+    &.#{$prefix}radio-inline {
+        display: inline-block;
+    }
+
+    input[type="radio"] {
+        display: none;
+        &:checked + label:before {
+            border-color: $ui-radio-checked-color;
+            background: transparent;
+            animation: radio-ripple 0.2s linear forwards;
+        }
+        &:checked + label:after {
+            transform: scale(1);
+        }
+        &:disabled + label:before {
+            background: #eee;
+        }
+        &:disabled + label {
+            color: #999;
+        }
+    }
+
+    label {
+        display:inline-block;
+        vertical-align: bottom;
+        height: $ui-radio-size;
+        position: relative;
+        padding: 0 10px 0 ($ui-radio-size + 10px);
+        margin-bottom:0;
+        font-weight: normal;
+        cursor: pointer;
+        &:before, &:after {
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            transition: all .3s ease;
+            transition-property: transform, border-color;
+        }
+        &:before {
+            left: 0;
+            top: 0;
+            width: $ui-radio-size;
+            height: $ui-radio-size;
+            border: 2px solid $ui-radio-border-color;
+            background: #fafafa;
+        }
+        &:after {
+            top: $ui-radio-checked-size / 2;
+            left: $ui-radio-checked-size / 2;
+            width:$ui-radio-checked-size;
+            height:$ui-radio-checked-size;
+            transform: scale(0);
+            background:$ui-radio-checked-color;
+        }
+    }
+}
+
+@keyframes radio-ripple {
+    0% {
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0);
+    }
+    50% {
+        box-shadow: 0px 0px 0px $ui-radio-ripple-size rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0px 0px 0px $ui-radio-ripple-size rgba(0, 0, 0, 0);
+    }
+}

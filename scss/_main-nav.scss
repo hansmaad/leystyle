@@ -1,0 +1,27 @@
+@import "mixins/media";
+
+.#{$prefix}main-nav {
+
+  padding: 0 0 .5rem 0;
+  ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      font-weight: 700;
+  }
+  li {
+      display: inline-block;
+  }
+  a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      @include guide-media-sm-down() {
+          font-size: 1rem;
+      }
+      padding: 0 2em 0 0;
+      color: $leybold-text-default-color;
+      &:hover {
+          color: $leybold-link-hover-color-red;
+      }
+  }
+}
