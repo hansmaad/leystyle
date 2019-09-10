@@ -1,0 +1,37 @@
+
+@import "globals";
+
+
+.#{$prefix}app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.#{$prefix}main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.#{$prefix}content {
+    overflow: auto;
+    flex-grow: 1;
+}
+
+.#{$prefix}sidebar {
+    width: $leybold-sidebar-width;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .#{$prefix}sidebar {
+        width: 0;
+        overflow: hidden;
+        &.#{$prefix}visible {
+            width: $leybold-sidebar-width;
+        }
+    }
+}

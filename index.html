@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +10,73 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
 
 </head>
+
 <body>
-  <div class="container">
-    <h1>Leystyle</h1>
-    <p>Paragraph</p>
-
-    <div class="ly-form-group">
-        <label for="value1">Value</label>
-        <input type="text">
-    </div>
-    <button class="ly-btn ly-btn-primary ly-btn-raised" type="button">Submit</button>
-
-    <div class="ly-form-group ly-mt-2">
-        <label>Some options</label>
-        <div class="ly-radio">
-            <input type="radio" id="evacuated" name="evacuated" >
-            <label for="evacuated">Pipe is evacuated</label>
-          </div>
-          <div class="ly-radio">
-            <input type="radio" id="vented" name="vented" >
-            <label for="vented">Pipe is not evacuated</label>
-          </div>
-        <p>
-            If the pumps are running before the pumping process begins,
-            it is recommended to use valves very close to the chamber in order to separate the pipeline.
-            The pipeline is then <strong>evacuated</strong> and thus accelerates the pumping process.
-        </p>
+  <div class="ly-app">
+    <div class="ly-sidebar">
+      <div class="ly-sidebar-head">
+        BRAND
       </div>
+      <div class="ly-sidebar-main">
+        <ul class="ly-sidebar-nav">
+          <li><a href="#">Link 1</a></li>
+          <li class="ly-active"><a href="#">Link 2 (active)</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+        <ul class="ly-sidebar-nav ly-sidebar-nav-border-top">
+          <li><a href="#">Link 1</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ly-main">
+      <div class="ly-toolbar">
+        <div class="ly-toolbar-btns">
+          <button type="button">Button 1</button>
+          <button type="button" disabled="disabled">Button 2</button>
+          <div class="ly-toolbar-fill"></div>
+          <button type="button">Button 3</button>
+        </div>
+        <div>
+            <ul class="ly-toolbar-tabs">
+              <li><a href="#">Tab 1</a></li>
+              <li class="ly-active"><a href="#">Tab 2 (active)</a></li>
+              <li><a href="#">Tab 1</a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="ly-content">
+        <div class="container ly-pt-2">
+          <h1>Leystyle</h1>
+          <p>Paragraph</p>
+
+          <div class="ly-form-group">
+            <label for="value1">Value</label>
+            <input type="text">
+          </div>
+          <button class="ly-btn ly-btn-primary ly-btn-raised" type="button">Submit</button>
+
+          <div class="ly-form-group ly-mt-2">
+            <label>Some options</label>
+            <div class="ly-radio">
+              <input type="radio" id="evacuated" name="evacuated">
+              <label for="evacuated">Pipe is evacuated</label>
+            </div>
+            <div class="ly-radio">
+              <input type="radio" id="vented" name="vented">
+              <label for="vented">Pipe is not evacuated</label>
+            </div>
+            <p>
+              If the pumps are running before the pumping process begins,
+              it is recommended to use valves very close to the chamber in order to separate the pipeline.
+              The pipeline is then <strong>evacuated</strong> and thus accelerates the pumping process.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
+
 </body>
+
 </html>

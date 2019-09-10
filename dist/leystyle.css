@@ -1051,4 +1051,177 @@ td .ly-checkbox {
   background: rgba(0, 0, 0, 0.26);
 }
 
+.ly-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.ly-main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.ly-content {
+  overflow: auto;
+  flex-grow: 1;
+}
+
+.ly-sidebar {
+  width: 15em;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .ly-sidebar {
+    width: 0;
+    overflow: hidden;
+  }
+  .ly-sidebar.ly-visible {
+    width: 15em;
+  }
+}
+.ly-toolbar {
+  min-height: 3em;
+  background: #005470;
+  box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.ly-toolbar .ly-toolbar-btns {
+  height: 3em;
+  display: flex;
+  padding: 0 1em;
+  align-items: center;
+}
+.ly-toolbar .ly-toolbar-btns .ly-toolbar-fill {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.ly-toolbar .ly-toolbar-btns .ly-toolbar-heading, .ly-toolbar .ly-toolbar-btns .ly-toolbar-text, .ly-toolbar .ly-toolbar-btns button {
+  height: 3em;
+  line-height: 3em;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.ly-toolbar .ly-toolbar-btns .ly-toolbar-heading {
+  font-size: 1.1em;
+}
+.ly-toolbar .ly-toolbar-btns .ly-toolbar-text, .ly-toolbar .ly-toolbar-btns button {
+  padding: 0 1em;
+}
+.ly-toolbar .ly-toolbar-btns button {
+  margin: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+}
+.ly-toolbar .ly-toolbar-btns button[disabled] {
+  opacity: 0.5;
+  cursor: default;
+}
+.ly-toolbar .ly-toolbar-btns .ly-toolbar-icon {
+  display: inline-flex;
+  align-self: center;
+}
+.ly-toolbar .ly-toolbar-btns .ly-toolbar-icon:not(:last-child) {
+  margin-right: 0.5em;
+}
+
+.ly-toolbar-tabs {
+  font-size: 1em;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  background: #005470;
+}
+.ly-toolbar-tabs li a {
+  color: #fff;
+  display: block;
+  padding: 1em 2em;
+  outline: none;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.ly-toolbar-tabs li.ly-active a {
+  border-bottom: 3px solid #FFEB3B;
+  opacity: 1;
+  animation: leybold-tab-ripple 0.2s linear forwards;
+}
+
+@keyframes leybold-tab-ripple {
+  0% {
+    background: transparent;
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  100% {
+    background: transparent;
+  }
+}
+.ly-sidebar {
+  background: #fff;
+  border-right: 1px solid #e0e0e0;
+}
+
+.ly-sidebar-head {
+  padding: 0.4em 0.5em 0.5em 1.5em;
+  border-bottom: 1px solid #ccc;
+}
+.ly-sidebar-head span {
+  font-weight: 700;
+  font-size: 1.75em;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+.ly-sidebar-nav {
+  margin: 0;
+  padding: 0.5em 0;
+  list-style: none;
+}
+.ly-sidebar-nav li {
+  max-width: 15em;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 40px;
+}
+.ly-sidebar-nav li.ly-active {
+  background: rgba(200, 221, 240, 0.3);
+  border-right: 5px solid #52ca47;
+}
+.ly-sidebar-nav li a {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 30px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+.ly-sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #666;
+  background: rgba(0, 0, 0, 0.1);
+}
+.ly-sidebar-nav li a:active, .ly-sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.ly-sidebar-nav-border-top {
+  border-top: 1px solid #e0e0e0;
+}
+
 /*# sourceMappingURL=leystyle.css.map */
