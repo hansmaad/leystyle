@@ -364,15 +364,12 @@ label {
   display: inline-block;
 }
 
-.ly-form-group {
-  margin-bottom: 1em;
-}
-.ly-form-group label {
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-  font-weight: 700;
-}
-.ly-form-group input, .ly-form-group select, .ly-form-group textarea {
+.ly-form-group input,
+.ly-form-group select,
+.ly-form-group textarea,
+input.ly-form-control,
+select.ly-form-control,
+textarea.ly-form-control {
   display: block;
   width: 100%;
   height: calc(1.5em + .75rem + 2px);
@@ -385,18 +382,42 @@ label {
   border: 1px solid rgba(0, 0, 0, 0.25);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.ly-form-group input:disabled, .ly-form-group input[readonly], .ly-form-group select:disabled, .ly-form-group select[readonly], .ly-form-group textarea:disabled, .ly-form-group textarea[readonly] {
+.ly-form-group input:disabled, .ly-form-group input[readonly],
+.ly-form-group select:disabled,
+.ly-form-group select[readonly],
+.ly-form-group textarea:disabled,
+.ly-form-group textarea[readonly],
+input.ly-form-control:disabled,
+input.ly-form-control[readonly],
+select.ly-form-control:disabled,
+select.ly-form-control[readonly],
+textarea.ly-form-control:disabled,
+textarea.ly-form-control[readonly] {
   background-color: #ccc;
 }
-.ly-form-group textarea {
-  height: auto;
-}
-.ly-form-group input:focus, .ly-form-group select:focus {
+.ly-form-group input:focus,
+.ly-form-group select:focus,
+.ly-form-group textarea:focus,
+input.ly-form-control:focus,
+select.ly-form-control:focus,
+textarea.ly-form-control:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.5);
+}
+
+.ly-form-group {
+  margin-bottom: 1em;
+}
+.ly-form-group label {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.ly-form-group textarea {
+  height: auto;
 }
 
 .ly-input-group {
