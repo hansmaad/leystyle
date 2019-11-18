@@ -45,7 +45,7 @@ $ui-radio-ripple-size: 15px;
     label {
         display:inline-block;
         vertical-align: bottom;
-        height: $ui-radio-size;
+        min-height: $ui-radio-size;
         position: relative;
         padding: 0 10px 0 ($ui-radio-size + 10px);
         margin-bottom:0;

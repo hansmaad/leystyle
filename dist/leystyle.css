@@ -951,7 +951,7 @@ td.ly-td-vcenter {
 .ly-radio label {
   display: inline-block;
   vertical-align: bottom;
-  height: 20px;
+  min-height: 20px;
   position: relative;
   padding: 0 10px 0 30px;
   margin-bottom: 0;
