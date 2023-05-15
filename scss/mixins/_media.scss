@@ -1,6 +1,0 @@
-
-@import "bootstrap/scss/mixins/breakpoints";
-
-// breakpoint mixin wrappers
-@mixin guide-media-sm-down() { @include media-breakpoint-down(sm) { @content; } }
-@mixin guide-media-sm-up() { @include media-breakpoint-up(sm) { @content; } }
